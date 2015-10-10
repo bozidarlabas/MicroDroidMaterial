@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager_default"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.bozidar.microdroid.iphoneization.ViewPager.CircleIndicator
+            android:layout_above="@+id/line"
+            android:id="@+id/indicator_default"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"/>
+
+        <View
+            android:id="@+id/line"
+            android:layout_above="@+id/btnContainerBottom"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#ffffff" />
+
+
+        <RelativeLayout
+            android:paddingTop="5dp"
+            android:id="@+id/btnContainerBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:padding="10dp"
+                android:id="@+id/btnSkip"
+                android:textColor="@color/whiteColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="@string/skip_tutorial"
+                android:background="@drawable/ripple"
+                />
+
+            <Button
+                android:padding="10dp"
+                android:id="@+id/btnNext"
+                android:textColor="@color/whiteColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:text="@string/next"
+                android:background="@drawable/ripple"
+                />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
