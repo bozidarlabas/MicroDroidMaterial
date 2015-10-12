@@ -15,7 +15,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 /**
- * Created by macbook on 10.10.2015..
+ * Created by Bozidar on 10.10.2015..
  */
 public class MockModelItem implements MicroItem {
 
@@ -52,6 +52,10 @@ public class MockModelItem implements MicroItem {
     @Override
     public void setItemView(View view) {
         ButterKnife.inject(this, view);
+    }
+
+    public MockModel getModel(){
+        return this.model;
     }
 
 }

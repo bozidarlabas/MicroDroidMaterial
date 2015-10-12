@@ -1,12 +1,15 @@
 package com.bozidar.labas.microdroid.activities;
 
+import android.app.ActivityOptions;
+import android.content.Intent;
+import android.os.Build;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
 import com.bozidar.labas.microdroid.R;
+import com.bozidar.labas.microdroid.adapters.TutorialAdapter;
 import com.bozidar.microdroid.base.MicroActivity;
 import com.bozidar.microdroid.iphoneization.ViewPager.CircleIndicator;
-import com.bozidar.microdroid.slidingtab.adapter.MicroPagerAdapter;
 
 import butterknife.InjectView;
 import butterknife.OnClick;
@@ -21,7 +24,7 @@ public class TutorialActivity extends MicroActivity{
 
     @Override
     public void init() {
-        MicroPagerAdapter pagerAdapter = new MicroPagerAdapter(getSupportFragmentManager());
+        TutorialAdapter pagerAdapter = new TutorialAdapter(getSupportFragmentManager());
         viewPagerTutorial.setAdapter(pagerAdapter);
         circleIndicator.setViewPager(viewPagerTutorial);
     }
@@ -55,6 +58,12 @@ public class TutorialActivity extends MicroActivity{
 
     @OnClick(R.id.btnSkip)
     public void skipTutorial(View v){
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
 
+
+            startActivity(new Intent(this, LoginActivity.class), ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+
+
+        }
     }
 }

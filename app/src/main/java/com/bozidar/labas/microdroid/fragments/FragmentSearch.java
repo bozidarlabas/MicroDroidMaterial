@@ -35,7 +35,7 @@ public class FragmentSearch extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.test_fragment_search, container, false);
+        View v = inflater.inflate(R.layout.fragment_search, container, false);
         mSearch = (EditText) v.findViewById(R.id.edit_text_search);
         mTRansBackView = (RelativeLayout) v.findViewById(R.id.view_search);
         mSearch.requestFocus();

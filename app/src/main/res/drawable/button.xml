@@ -1,0 +1,11 @@
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/shadow"/>
+    <item
+        android:drawable="@drawable/circle_red"
+        android:bottom="10px"
+        android:right="2dp"
+        android:left="2dp"/>
+
+</layer-list>

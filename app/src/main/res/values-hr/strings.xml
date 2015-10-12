@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MicroDroid</string>
+    <string name="action_settings">Postavke</string>
+    <string name="hello_blank_fragment"></string>
+    <string name="skip_tutorial">Preskoci tutorial</string>
+    <string name="title_activity_details"></string>
+    <string name="txt_tutorial_desc">Ovo je ops ove aplikacije. Napisi nesto ovdje.</string>
+    <string name="txt_tutorial_header">Opis aplikacije</string>
+</resources>
