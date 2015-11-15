@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="82dp"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:background="?android:selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical" >
+
+    <com.bozidar.microdroid.iphoneization.circleimageview.CircleImageView
+        android:transitionName="@string/transition_tvshow_photo"
+        android:id="@+id/iv_show_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/img_profile_default"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_show_image"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_show_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jonh Doe"
+            android:textColor="#000"
+            android:textSize="18sp"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/small_ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3.0sp"
+            android:isIndicator="true"
+            android:rating="0" />
+
+    </LinearLayout>
+</RelativeLayout>

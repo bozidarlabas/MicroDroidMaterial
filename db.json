@@ -1,0 +1,104 @@
+{
+  "tvstations": [
+    {
+      "name": "Claudia Kirby",
+      "id": 1,
+      "img_url": "http://www.nsz.hr/wp-content/uploads/2013/10/HRT-logo.jpg"
+    },
+    {
+      "name": "Berger Wooten",
+      "id": 2,
+      "img_url": "http://www.nsz.hr/wp-content/uploads/2013/10/HRT-logo.jpg"
+    },
+    {
+      "name": "Natalia Ballard",
+      "id": 3,
+      "img_url": "http://www.nsz.hr/wp-content/uploads/2013/10/HRT-logo.jpg"
+    },
+    {
+      "name": "Dudley Grant",
+      "id": 4,
+      "img_url": "http://www.nsz.hr/wp-content/uploads/2013/10/HRT-logo.jpg"
+    },
+    {
+      "name": "Maribel Randolph",
+      "id": 5,
+      "img_url": "http://www.nsz.hr/wp-content/uploads/2013/10/HRT-logo.jpg"
+    },
+    {
+      "name": "Maribel Randolph",
+      "id": 6,
+      "img_url": "http://www.nsz.hr/wp-content/uploads/2013/10/HRT-logo.jpg"
+    },
+    {
+      "name": "Maribel Randolph",
+      "id": 7,
+      "img_url": "http://www.nsz.hr/wp-content/uploads/2013/10/HRT-logo.jpg"
+    }
+  ],
+  "tvshows": [
+    {
+      "name": "Nedjeljom u 2",
+      "id": 0,
+      "day": 5,
+      "from": "01:02:03",
+      "to": "01:02:03",
+      "status": 2,
+      "path": "http://www.mobilenations.com/broadcasting/podcast_tv_show_1400.jpg"
+    },
+    {
+      "name": "Nesto",
+      "id": 1,
+      "day": 1,
+      "from": "01:02:03",
+      "to": "01:02:03",
+      "status": 2,
+      "path": "http://www.mobilenations.com/broadcasting/podcast_tv_show_1400.jpg"
+    },
+    {
+      "name": "Primjer",
+      "id": 2,
+      "day": 5,
+      "from": "01:02:03",
+      "to": "01:02:03",
+      "status": 2,
+      "path": "http://www.mobilenations.com/broadcasting/podcast_tv_show_1400.jpg"
+    },
+    {
+      "name": "Lala",
+      "id": 3,
+      "day": 4,
+      "from": "01:02:03",
+      "to": "01:02:03",
+      "status": 1,
+      "path": "http://www.mobilenations.com/broadcasting/podcast_tv_show_1400.jpg"
+    },
+    {
+      "name": "Lala 2",
+      "id": 4,
+      "day": 3,
+      "from": "01:02:03",
+      "to": "01:02:03",
+      "status": 2,
+      "path": "http://www.mobilenations.com/broadcasting/podcast_tv_show_1400.jpg"
+    },
+    {
+      "name": "Nedjeljom u 3",
+      "id": 5,
+      "day": 7,
+      "from": "01:02:03",
+      "to": "01:02:03",
+      "status": 2,
+      "path": "http://www.mobilenations.com/broadcasting/podcast_tv_show_1400.jpg"
+    },
+    {
+      "name": "Xdddsad",
+      "id": 6,
+      "day": 2,
+      "from": "01:02:03",
+      "to": "01:02:03",
+      "status": 1,
+      "path": "http://www.mobilenations.com/broadcasting/podcast_tv_show_1400.jpg"
+    }
+  ]
+}

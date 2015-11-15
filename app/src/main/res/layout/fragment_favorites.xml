@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="Favorites TV Shows"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/headerText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimaryDark"/>
+
+    <include
+        layout="@layout/card_view_large"/>
+
+    <include layout="@layout/er" />
+
+</LinearLayout>
