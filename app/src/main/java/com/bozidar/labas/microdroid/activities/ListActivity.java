@@ -9,7 +9,9 @@ import android.support.v4.util.Pair;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.bozidar.labas.microdroid.R;
 import com.bozidar.labas.microdroid.mvp.model.MockModel;
@@ -26,6 +28,8 @@ public class ListActivity extends MicroActivity implements MicroRecyclerAdapter.
 
     @InjectView(R.id.list)
     RecyclerView list;
+    @InjectView(R.id.toolbar_title)
+    TextView tvToolbar;
 
     private MicroRecyclerAdapter adapter;
 
@@ -40,10 +44,9 @@ public class ListActivity extends MicroActivity implements MicroRecyclerAdapter.
 
         ArrayList<MockModel> data = MockModel.getData();
 
-
         for (MockModel model : data) {
             Log.d("test", model.get(MockModel.Field.NAME));
-            MockModelItem projectItem =  new MockModelItem(model);
+            MockModelItem projectItem = new MockModelItem(model);
             adapter.addItem(projectItem);
         }
     }
@@ -75,28 +78,28 @@ public class ListActivity extends MicroActivity implements MicroRecyclerAdapter.
         });
 
         setRecyclerView();
+        setCustomToolbar();
+    }
 
+    private void setCustomToolbar() {
+        tvToolbar.setTypeface(setToolbarFont("Courgette-Regular.ttf"));
     }
 
 
     @Override
     public void microItemClicked(View view, MicroItem item) {
         Intent intent = new Intent(ListActivity.this, DetailsActivity.class);
-        MockModel clickedItem = ((MockModelItem)item).getModel();
+        MockModel clickedItem = ((MockModelItem) item).getModel();
         intent.putExtra(DetailsActivity.ID, clickedItem.getId());
 
-
         ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(
-                // the context of the activity
                 ListActivity.this,
-
-                // For each shared element, add to this method a new Pair item,
-                // which contains the reference of the view we are transitioning *from*,
-                // and the value of the transitionName attribute
                 new Pair<>(view.findViewById(R.id.CONTACT_circle),
                         getString(R.string.transition_name_circle))
         );
 
         ActivityCompat.startActivity(ListActivity.this, intent, options.toBundle());
     }
+
+
 }

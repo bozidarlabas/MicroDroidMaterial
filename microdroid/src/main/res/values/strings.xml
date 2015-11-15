@@ -9,4 +9,14 @@
     <string name="search">Search</string>
     <string name="search_hint">Write something</string>
 
+    <!-- Social Network login -->
+    <string name="login">login</string>
+    <string name="facebook_login">Facebook</string>
+    <string name="googleplus_login">Google plus</string>
+    <string name="twiter_login">Twitter</string>
+    <string name="img_uri">img_uri</string>
+    <string name="username">img_uri</string>
+    <string name="email">img_uri</string>
+    <string name="user_data">user</string>
+
 </resources>

@@ -6,10 +6,8 @@ import android.text.TextWatcher;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -61,27 +59,13 @@ public abstract class MicroSearchActivity extends MicroActivity implements OnSea
 
         final SearchAdapter searchAdapter = new SearchAdapter(this, countryStored, false);
         listSearch.setVisibility(View.VISIBLE);
-        listSearch.setAdapter(searchAdapter);
 
 
-        listSearch.setOnItemClickListener((adapterView, view1, position, l) -> {
-
-            String clickedItem = "";
 
 
-            if(!edtToolSearch.getText().toString().equals(""))
-                clickedItem = filterList.get(position);
-            else
-                if(countryStored != null)
-                    clickedItem = countryStored.get(position);
 
-            onSearchItemClick(view1, clickedItem);
 
-            String country = String.valueOf(adapterView.getItemAtPosition(position));
-            SharedPreference.addList(getBaseContext(), Utils.PREFS_NAME, Utils.KEY_COUNTRIES, country);
-            edtToolSearch.setText(country);
-            listSearch.setVisibility(View.GONE);
-        });
+
 
         edtToolSearch.addTextChangedListener(new TextWatcher() {
             @Override

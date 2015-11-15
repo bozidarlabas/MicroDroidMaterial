@@ -1,6 +1,5 @@
 package com.bozidar.labas.microdroid.activities;
 
-import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Build;
 import android.support.v4.view.ViewPager;
@@ -59,11 +58,8 @@ public class TutorialActivity extends MicroActivity{
     @OnClick(R.id.btnSkip)
     public void skipTutorial(View v){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
-
-
-            startActivity(new Intent(this, LoginActivity.class), ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
-
-
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
         }
     }
 }

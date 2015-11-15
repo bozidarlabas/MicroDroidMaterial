@@ -6,4 +6,6 @@
 
     <dimen name="edittext_padding">16.0dip</dimen>
     <dimen name="edittext_stroke">8.0dip</dimen>
+    <dimen name="app_bar_height">256dp</dimen>
+    <dimen name="expanded_toolbar_title_margin_start">64dp</dimen>
 </resources>

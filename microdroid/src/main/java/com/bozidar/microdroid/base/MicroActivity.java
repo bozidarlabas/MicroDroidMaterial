@@ -1,10 +1,12 @@
 package com.bozidar.microdroid.base;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuItem;
 
 import butterknife.ButterKnife;
 
@@ -12,15 +14,17 @@ import butterknife.ButterKnife;
 public abstract class MicroActivity extends AppCompatActivity {
 
     private int layoutResource;
-    private Fragment currentFragment;
+    protected Fragment currentFragment;
     private int fragmentContainer;
     protected Bundle savedInstanceState;
-    private Toolbar toolbar;
+    protected Toolbar toolbar;
+    protected Menu menu;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         this.savedInstanceState = savedInstanceState;
         this.layoutResource = setupLayoutRes();
         setContentView(this.layoutResource);
@@ -32,13 +36,14 @@ public abstract class MicroActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        this.menu = menu;
         if(setupMenuRes() != 0)
             getMenuInflater().inflate(setupMenuRes(), menu);
         return true;
     }
 
     public void setFragment(int container, Fragment fragment) {
-        if (this.savedInstanceState == null) {
+        if (this.savedInstanceState == null && currentFragment != fragment) {
             this.currentFragment = fragment;
             this.fragmentContainer = container;
             getSupportFragmentManager().beginTransaction().replace(container, fragment).commit();
@@ -56,6 +61,20 @@ public abstract class MicroActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             this.toolbar = toolbar;
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case android.R.id.home:
+                onBackPressed();
+        }
+        return true;
+    }
+
+    public Typeface setToolbarFont(String font){
+        return Typeface.createFromAsset(getAssets(), font);
     }
 
 

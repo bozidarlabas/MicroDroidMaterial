@@ -50,12 +50,12 @@
                 android:textSize="18.0dip" />
 
             <EditText
-                android:id="@+id/name"
+                android:id="@+id/username"
                 style="@style/FormEditText"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16.0dip"
-                android:hint="Name"
+                android:hint="Username"
                 android:imeActionLabel="Name"
                 android:imeOptions="actionNext"
                 android:inputType="textPersonName"
@@ -63,7 +63,7 @@
                 android:singleLine="true" />
 
             <AutoCompleteTextView
-                android:id="@id/email"
+                android:id="@+id/email"
                 style="@style/FormEditText"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -85,8 +85,51 @@
                 android:maxLines="1"
                 android:singleLine="true" />
 
+            <EditText
+                android:id="@+id/first_name"
+                style="@style/FormEditText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="First name"
+                android:imeActionLabel="Password"
+                android:imeOptions="normal|actionUnspecified"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/last_name"
+                style="@style/FormEditText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Last name"
+                android:imeActionLabel="Password"
+                android:imeOptions="normal|actionUnspecified"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <EditText
+                android:id="@+id/city"
+                style="@style/FormEditText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="City"
+                android:imeActionLabel="Password"
+                android:imeOptions="normal|actionUnspecified"
+                android:maxLines="1"
+                android:singleLine="true" />
+
             <Button
-                android:id="@id/email_sign_in_button"
+                android:id="@+id/birth_date"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Birth date"
+                android:imeActionLabel="Password"
+                android:imeOptions="normal|actionUnspecified"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/email_sign_in_button"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16.0dip"

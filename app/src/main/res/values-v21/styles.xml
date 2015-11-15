@@ -1,4 +1,7 @@
-<resources>>
+<resources>
+
+
+
     <style name="AppTheme.NoActionBar" parent="AppTheme.Base">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -8,16 +11,8 @@
 
 
     <style name="AppTheme.Base">
-
-        <item name="android:windowContentTransitions">true</item>
-
-        <item name="android:windowEnterTransition">@android:transition/fade</item>
-        <item name="android:windowExitTransition">@android:transition/fade</item>
-
         <item name="android:windowAllowEnterTransitionOverlap">true</item>
         <item name="android:windowAllowReturnTransitionOverlap">true</item>
-        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
-        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
     </style>
 
     <style name="FormEditText.Clean" parent="@style/Widget.AppCompat.EditText">
@@ -26,6 +21,23 @@
         <item name="android:background">@null</item>
         <item name="android:padding">16.0dip</item>
     </style>
+
+
+    <style name="AppTheme.TvShowList" parent="AppTheme.NoActionBar">
+        <item name="android:windowExitTransition">@transition/transition_fade</item>
+        <item name="android:windowEnterAnimation">@android:transition/explode</item>
+    </style>
+
+    <style name="AppTheme.TvShowDetails" parent="AppTheme.NoActionBar">
+        <item name="android:windowEnterTransition">@transition/transition_explode</item>
+        <item name="android:windowReturnTransition">@transition/transition_fade</item>
+    </style>
+
+    <style name="AppTheme.RegisterActivity" parent="AppTheme.NoActionBar">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+
 
 
 </resources>

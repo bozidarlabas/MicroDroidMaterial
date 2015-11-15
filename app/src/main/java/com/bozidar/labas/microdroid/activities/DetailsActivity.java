@@ -1,9 +1,5 @@
 package com.bozidar.labas.microdroid.activities;
 
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.TextView;
 
 import com.bozidar.labas.microdroid.R;
@@ -18,31 +14,25 @@ public class DetailsActivity extends MicroActivity {
 
     @InjectView(R.id.DETAILS_name)
     TextView tvName;
+    @InjectView(R.id.toolbar_title)
+    TextView toobarTitle;
 
     @Override
     public void init() {
         MockModel model = MockModel.getItem(getIntent().getIntExtra(ID, 0));
-
         String name = model.get(MockModel.Field.NAME);
         tvName.setText(name);
+        setCustomToolbar();
+    }
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+    private void setCustomToolbar() {
+        toobarTitle.setTypeface(setToolbarFont("Courgette-Regular.ttf"));
     }
 
 
     @Override
     public int setupToolbar() {
-        return 0;
+        return R.id.toolbar;
     }
 
     @Override
@@ -54,6 +44,8 @@ public class DetailsActivity extends MicroActivity {
     public int setupMenuRes() {
         return 0;
     }
+
+
 
 
 

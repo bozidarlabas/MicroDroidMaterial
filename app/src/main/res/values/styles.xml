@@ -48,6 +48,29 @@
     </style>
 
 
+    <style name="TextEventName" parent="@style/TextAppearance.AppCompat.Large" />
+    <style name="TextEventName.Inverse" parent="@style/TextAppearance.AppCompat.Large.Inverse">
+        <item name="android:shadowColor">@color/event_text_shadow</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">4.0</item>
+    </style>
+
+    <style name="TextEventDescription" parent="@style/TextAppearance.AppCompat.Small">
+        <item name="android:textColor">#ff202020</item>
+    </style>
+
+    <style name="menu_labels_style">
+        <item name="android:background">@drawable/fab_label_background</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="small_ratingbar" parent="android:Widget.Holo.RatingBar.Small">
+        <item name="android:progressDrawable">@drawable/small_rating_bar</item>
+    </style>
+
+
+
 
 
 </resources>

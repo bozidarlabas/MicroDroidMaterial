@@ -20,8 +20,10 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile "com.android.support:appcompat-v7:23.0.1"
-    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.google.android.gms:play-services-gcm:8.1.0'
+    compile 'com.google.android.gms:play-services-plus:8.1.0'
+    compile 'com.getbase:floatingactionbutton:1.10.0'
     compile project(':microdroid')
+    compile 'com.github.asne:asne-twitter:0.3.3'
+    compile 'com.github.asne:asne-facebook:0.3.3'
 }
